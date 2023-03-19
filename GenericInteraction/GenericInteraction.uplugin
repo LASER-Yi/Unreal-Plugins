@@ -1,0 +1,23 @@
+﻿{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "GenericInteraction",
+	"Description": "Generic Interaction System for Unreal Engine",
+	"Category": "Other",
+	"CreatedBy": "LASER-Yi",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "GenericInteraction",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

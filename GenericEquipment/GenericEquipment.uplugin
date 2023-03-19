@@ -1,0 +1,20 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Generic Equipment",
+	"Description": "The generic equipment system for the unreal game",
+	"Category": "Gameplay",
+	"CreatedBy": "LASER-Yi",
+	"CreatedByURL": "https://github.com/LASER-Yi/GenericEquipment-Unreal",
+	"CanContainContent": false,
+	"IsBetaVersion": true,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "EquipmentCore",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
