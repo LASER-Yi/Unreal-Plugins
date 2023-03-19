@@ -18,7 +18,6 @@ public:
 	friend class UEquipmentComponent;
 
 protected:
-
 	virtual void OnEquipped();
 	virtual void OnUnequipped();
 

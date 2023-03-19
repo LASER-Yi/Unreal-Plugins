@@ -20,12 +20,13 @@ class GENERICINTERACTION_API IInteractableAsync
 	GENERATED_BODY()
 
 	DECLARE_DYNAMIC_DELEGATE_OneParam(FOnInteractionEnded, UObject*, Object);
+
 public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, BlueprintNativeEvent, Category = "Interaction")
 	bool CanInteract() const;
 	virtual bool CanInteract_Implementation() const;
-	
+
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Interaction")
-    bool InteractAsync();
-    virtual bool InteractAsync_Implementation();
+	bool InteractAsync();
+	virtual bool InteractAsync_Implementation();
 };

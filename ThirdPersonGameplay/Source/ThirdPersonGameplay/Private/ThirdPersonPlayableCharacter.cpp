@@ -44,7 +44,7 @@ void AThirdPersonPlayableCharacter::BeginPlay()
 void AThirdPersonPlayableCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-	
+
 	UEnhancedInputComponent* EIC = CastChecked<UEnhancedInputComponent>(PlayerInputComponent);
 
 	if (MovementInput)
@@ -53,7 +53,8 @@ void AThirdPersonPlayableCharacter::SetupPlayerInputComponent(UInputComponent* P
 	}
 	else
 	{
-		UE_LOG(LogInput, Error, TEXT("[%s] Error when binding movement input to the character, input action not found"), *GetNameSafe(this));
+		UE_LOG(LogInput, Error, TEXT("[%s] Error when binding movement input to the character, input action not found"),
+		       *GetNameSafe(this));
 	}
 
 	if (LookInput)
@@ -62,7 +63,8 @@ void AThirdPersonPlayableCharacter::SetupPlayerInputComponent(UInputComponent* P
 	}
 	else
 	{
-		UE_LOG(LogInput, Error, TEXT("[%s] Error when binding look input to the character, input action not found"), *GetNameSafe(this));
+		UE_LOG(LogInput, Error, TEXT("[%s] Error when binding look input to the character, input action not found"),
+		       *GetNameSafe(this));
 	}
 
 	if (RunInput)
@@ -72,13 +74,15 @@ void AThirdPersonPlayableCharacter::SetupPlayerInputComponent(UInputComponent* P
 	}
 	else
 	{
-		UE_LOG(LogInput, Warning, TEXT("[%s] Error when binding run input to the character, input action not found"), *GetNameSafe(this));
+		UE_LOG(LogInput, Warning, TEXT("[%s] Error when binding run input to the character, input action not found"),
+		       *GetNameSafe(this));
 	}
 }
 
 void AThirdPersonPlayableCharacter::OnMove(const FInputActionValue& InputValue)
 {
-	if (!ensureMsgf(InputValue.GetValueType() == EInputActionValueType::Axis2D, TEXT("MovementInput should use Axis2D input type")))
+	if (!ensureMsgf(InputValue.GetValueType() == EInputActionValueType::Axis2D,
+	                TEXT("MovementInput should use Axis2D input type")))
 	{
 		return;
 	}
@@ -96,14 +100,15 @@ void AThirdPersonPlayableCharacter::OnMove(const FInputActionValue& InputValue)
 
 	// add movement 
 	const FVector Value = InputValue.Get<FVector>();
-	
+
 	AddMovementInput(ForwardDirection, Value.Y);
 	AddMovementInput(RightDirection, Value.X);
 }
 
 void AThirdPersonPlayableCharacter::OnLook(const FInputActionValue& InputValue)
 {
-	if (!ensureMsgf(InputValue.GetValueType() == EInputActionValueType::Axis2D, TEXT("LookInput should use Axis2D input type")))
+	if (!ensureMsgf(InputValue.GetValueType() == EInputActionValueType::Axis2D,
+	                TEXT("LookInput should use Axis2D input type")))
 	{
 		return;
 	}
@@ -123,7 +128,7 @@ void AThirdPersonPlayableCharacter::OnRun(bool bEnabled)
 {
 	UCharacterMovementComponent* CharacterMovement = GetCharacterMovement();
 	check(CharacterMovement);
-	
+
 	if (bEnabled)
 	{
 		CharacterMovement->MaxWalkSpeed = DefaultWalkVelocity * RunSpeedModifier;

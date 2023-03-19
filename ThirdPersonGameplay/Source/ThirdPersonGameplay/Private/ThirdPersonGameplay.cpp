@@ -5,5 +5,5 @@
 #define LOCTEXT_NAMESPACE "FThirdPersonGameplayModule"
 
 #undef LOCTEXT_NAMESPACE
-	
+
 IMPLEMENT_MODULE(FThirdPersonGameplayModule, ThirdPersonGameplay)

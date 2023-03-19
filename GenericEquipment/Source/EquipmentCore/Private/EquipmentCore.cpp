@@ -13,7 +13,7 @@ void FEquipmentCoreModule::ShutdownModule()
 }
 
 #undef LOCTEXT_NAMESPACE
-	
+
 IMPLEMENT_MODULE(FEquipmentCoreModule, EquipmentCore)
 
 DEFINE_LOG_CATEGORY(LogEquipmentCore)

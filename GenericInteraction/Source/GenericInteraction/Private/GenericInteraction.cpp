@@ -5,5 +5,5 @@
 #define LOCTEXT_NAMESPACE "FGenericInteractionModule"
 
 #undef LOCTEXT_NAMESPACE
-	
+
 IMPLEMENT_MODULE(FGenericInteractionModule, GenericInteraction)

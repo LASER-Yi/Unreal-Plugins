@@ -15,5 +15,4 @@ bool IInteractable::Interact_Implementation()
 }
 
 
-
 // bool IInteractable::Interactable::Interact_

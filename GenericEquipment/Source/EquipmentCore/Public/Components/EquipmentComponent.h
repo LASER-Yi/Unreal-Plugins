@@ -20,7 +20,6 @@ struct FAppliedEquipment
 
 	UPROPERTY(BlueprintReadOnly)
 	TObjectPtr<UEquipmentInstance> Instance;
-	
 };
 
 /*

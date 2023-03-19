@@ -20,7 +20,6 @@ class GENERICINTERACTION_API IInteractable
 	GENERATED_BODY()
 
 public:
-
 	UFUNCTION(BlueprintCallable, BlueprintPure, BlueprintNativeEvent, Category = "Interaction")
 	bool CanInteract() const;
 	virtual bool CanInteract_Implementation() const;

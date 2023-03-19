@@ -7,5 +7,4 @@
 
 class FGenericInteractionModule : public IModuleInterface
 {
-
 };

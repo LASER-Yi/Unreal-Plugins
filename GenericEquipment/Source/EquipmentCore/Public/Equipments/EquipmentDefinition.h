@@ -13,5 +13,4 @@ UCLASS(BlueprintType, Blueprintable)
 class EQUIPMENTCORE_API UEquipmentDefinition : public UObject
 {
 	GENERATED_BODY()
-
 };

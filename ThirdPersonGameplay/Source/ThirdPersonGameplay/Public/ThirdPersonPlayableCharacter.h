@@ -51,7 +51,7 @@ protected:
 	float DefaultWalkVelocity;
 
 	virtual void BeginPlay() override;
-	
+
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 	virtual void OnMove(const FInputActionValue& InputValue);

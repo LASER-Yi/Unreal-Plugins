@@ -35,7 +35,7 @@ void UEquipmentComponent::UnequipItem(UEquipmentInstance* Instance)
 		if (EquippedItem.Instance == Instance)
 		{
 			EquippedItem.Instance->OnUnequipped();
-			
+
 			Iter.RemoveCurrent();
 		}
 	}
