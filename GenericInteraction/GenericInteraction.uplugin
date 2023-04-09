@@ -4,14 +4,12 @@
 	"VersionName": "1.0",
 	"FriendlyName": "GenericInteraction",
 	"Description": "Generic Interaction System for Unreal Engine",
-	"Category": "Other",
+	"Category": "Gameplay",
 	"CreatedBy": "LASER-Yi",
-	"CreatedByURL": "",
-	"DocsURL": "",
-	"MarketplaceURL": "",
-	"CanContainContent": true,
+	"CreatedByURL": "https://github.com/LASER-Yi/Unreal-Plugins",
+	"CanContainContent": false,
 	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
+	"IsExperimentalVersion": true,
 	"Installed": false,
 	"Modules": [
 		{

@@ -6,9 +6,10 @@
 	"Description": "The generic equipment system for the unreal game",
 	"Category": "Gameplay",
 	"CreatedBy": "LASER-Yi",
-	"CreatedByURL": "https://github.com/LASER-Yi/GenericEquipment-Unreal",
+	"CreatedByURL": "https://github.com/LASER-Yi/Unreal-Plugins",
 	"CanContainContent": false,
-	"IsBetaVersion": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": true,
 	"Installed": false,
 	"Modules": [
 		{
