@@ -20,11 +20,15 @@ class GENERICINTERACTION_API IInteractable
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, BlueprintPure, BlueprintNativeEvent, Category = "Interaction")
-	bool CanInteract() const;
-	virtual bool CanInteract_Implementation() const;
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Interaction")
+	bool CanInteract(const UInteractionComponent* Owner) const;
+	virtual bool CanInteract_Implementation(const UInteractionComponent* Owner) const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Interaction")
-	bool Interact();
-	virtual bool Interact_Implementation();
+	FText GetInteractionText() const;
+	virtual FText GetInteractionText_Implementation() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Interaction")
+	bool Interact(UInteractionComponent* Owner);
+	virtual bool Interact_Implementation(UInteractionComponent* Owner);
 };
