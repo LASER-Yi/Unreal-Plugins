@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<BuildGraph xmlns="http://www.epicgames.com/BuildGraph" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.epicgames.com/BuildGraph ./Schema.xsd">
+    
+    <Option Name="PluginDirectory" DefaultValue="./" Description="The parent directory of plugins" />
+    <Option Name="ProductionDirectory" DefaultValue="./Productions" Description="The parent directory of producted plugins" />
+    <Option Name="HostPlatforms" DefaultValue="Win64+Mac" Description="The host platforms to modify the plugin, separated by +" />
+    <Option Name="TargetPlatforms" DefaultValue="$(HostPlatforms)" Description="The target platforms to run the plugin, separated by +" />
+
+    <Property Name="AllPluginTasks" Value="" />
+    
+    <Agent Name="Default Agent" Type="Compile">
+        <Node Name="Tag Plugins" Produces="#Plugins">
+            <Tag With="#Plugins" Files="..." Filter="*.uplugin" BaseDir="$(PluginDirectory)" />
+        </Node>
+        
+        <ForEach Name="PluginPath" Values="#Plugins">
+            <!-- TODO -->
+            <Property Name="PluginName" Value="$(PluginPath)" />
+            
+            <Node Name="Build $(PluginName)" Produces="#Plugins_$(PluginName)">
+                <Property Name="Args" Value="-Plugin=$(PluginPath)" />
+                <Property Name="Args" Value="$(Args) -Package=$(ProductionDirectory)/$(PluginName)" />
+                <Property Name="Args" Value="$(Args) -HostPlatforms=$(HostPlatforms)" />
+                <Property Name="Args" Value="$(Args) -TargetPlatforms=$(TargetPlatforms)" />
+                
+                <Command Name="BuildPlugin" Arguments="$(Args)" />
+            </Node>
+            
+            <Property Name="AllPluginTasks" Value="$(AllPluginTasks);#Plugin_$(PluginName)" />
+        </ForEach>
+    </Agent>
+    
+    <Aggregate Name="All" Requires="$(AllPluginTasks)" />
+</BuildGraph>

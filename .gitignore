@@ -18,3 +18,9 @@
 
 # Ignore compiled shader cache
 */Shaders/Intermediate/*
+
+# Ignore BuildGraph files
+Schema.xsd
+
+# Ignore Build Production
+/Productions/
