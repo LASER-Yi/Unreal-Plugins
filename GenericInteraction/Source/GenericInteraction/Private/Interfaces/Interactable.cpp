@@ -1,7 +1,7 @@
 // Copyright (c) LASER-Yi
 
 
-#include "Interactable.h"
+#include "Interfaces/Interactable.h"
 #include "Components/InteractionComponent.h"
 
 

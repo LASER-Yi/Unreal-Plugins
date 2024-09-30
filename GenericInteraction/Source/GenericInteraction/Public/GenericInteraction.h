@@ -8,3 +8,5 @@
 class FGenericInteractionModule : public IModuleInterface
 {
 };
+
+DECLARE_LOG_CATEGORY_EXTERN(LogInteraction, Display, Error);

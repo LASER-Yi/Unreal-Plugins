@@ -10,7 +10,7 @@
  * Query actors by types
  */
 UCLASS()
-class GENERICINTERACTION_API UActorTypeQuery final : public UActorQueryBase
+class UActorTypeQuery final : public UActorQueryBase
 {
 	GENERATED_BODY()
 

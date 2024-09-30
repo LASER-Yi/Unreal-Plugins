@@ -126,15 +126,15 @@ void AThirdPersonPlayableCharacter::OnLook(const FInputActionValue& InputValue)
 
 void AThirdPersonPlayableCharacter::OnRun(bool bEnabled)
 {
-	UCharacterMovementComponent* CharacterMovement = GetCharacterMovement();
-	check(CharacterMovement);
+	UCharacterMovementComponent* Movement = GetCharacterMovement();
+	check(Movement);
 
 	if (bEnabled)
 	{
-		CharacterMovement->MaxWalkSpeed = DefaultWalkVelocity * RunSpeedModifier;
+		Movement->MaxWalkSpeed = DefaultWalkVelocity * RunSpeedModifier;
 	}
 	else
 	{
-		CharacterMovement->MaxWalkSpeed = DefaultWalkVelocity;
+		Movement->MaxWalkSpeed = DefaultWalkVelocity;
 	}
 }

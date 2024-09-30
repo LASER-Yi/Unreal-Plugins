@@ -14,6 +14,8 @@ public class GenericInteraction : ModuleRules
 			{
 				"Core",
 				"GameplayAbilities",
+				"UMG",
+				"ModelViewViewModel",
 			}
 			);
 			

@@ -3,7 +3,7 @@
 
 #include "Components/InteractionComponent.h"
 
-#include "Interactable.h"
+#include "Interfaces/Interactable.h"
 
 
 UInteractionComponent::UInteractionComponent()
@@ -11,6 +11,14 @@ UInteractionComponent::UInteractionComponent()
 	PrimaryComponentTick.bCanEverTick = false;
 }
 
+
+void UInteractionComponent::Interact()
+{
+	if (CachedInteractableActor)
+	{
+		CachedInteractableActor->Interact(this);
+	}
+}
 
 void UInteractionComponent::BeginPlay()
 {

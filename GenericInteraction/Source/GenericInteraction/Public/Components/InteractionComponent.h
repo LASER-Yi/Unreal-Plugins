@@ -27,9 +27,12 @@ public:
 		meta = (EditCondition = "!bShouldCheckEveryFrames", ClampMin = 5, ClampMax = 60))
 	int SampleRate;
 
+	UFUNCTION(BlueprintCallable, Category = "Interaction")
+	void Interact();
+
 protected:
 	UPROPERTY(Transient, BlueprintReadOnly, Category = "Interaction", DisplayName = "Cached Interactable")
-	TScriptInterface<IInteractable> CachedInteractableObject;
+	TScriptInterface<IInteractable> CachedInteractableActor;
 	
 	virtual void BeginPlay() override;
 
