@@ -1,5 +1,5 @@
 DEFINE_SPEC(EquipmentComponentSpec, "GenericEquipment.EquipmentCore.EquipmentComponentSpec",
-            EAutomationTestFlags::ProductFilter | EAutomationTestFlags::ApplicationContextMask)
+            EAutomationTestFlags::ProductFilter | EAutomationTestFlags::ClientContext)
 
 void EquipmentComponentSpec::Define()
 {
